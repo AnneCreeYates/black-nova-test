@@ -1,1 +1,0 @@
-{"version":3,"sources":["scss\\main.scss"],"names":[],"mappings":"AACA;EACI,YAFG","file":"main.77bb5cfd.css","sourceRoot":"..\\src","sourcesContent":["$blue: purple;\r\nbody {\r\n    background: $blue;\r\n}"]}
