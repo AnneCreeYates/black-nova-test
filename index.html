@@ -8,6 +8,9 @@
   <!--the css file doesn't exist yet-->
   <link rel="stylesheet" href="/css/index.css" type="text/css" media="screen">
 
+  <!--Font Awesome -->
+  <script src="https://kit.fontawesome.com/2dfaf8e663.js" crossorigin="anonymous"></script>
+
   <title>Alexix Prior Nutrition | Nutritional Therapy | Health Coaching</title>
 </head>
 
@@ -148,9 +151,17 @@
           <input name="subject" type="text" class="contact__details, subject" placeholder="Subject" required>
           <textarea name="message" class="contact__details, message" placeholder="Your message" required></textarea>
 
-          <!--insert the recapture placeholder-->
+          <!--subscrive checkbox-->
+          <label class = "subscribe__label">Subscribe</label>
+          <input name = "subscribe" type = "checkbox" class = "subscribe-checkbox">
 
-          <!--insert a subscrive checkbox-->
+          <!--recapture placeholder - for now it doesn't work because on local host-->
+            <div class = "recaptcha__container">
+              <div id="google-recaptcha-js" class="g-recaptcha"  data-sitekey="6LcEYFwUAAAAAGjUrS7CWK9cLAl1103PskxKZuMP">
+              </div>
+            </div>
+
+          
           
           <input type="submit" class="contact__details, submit" value="SEND MESSAGE">
 
@@ -166,12 +177,14 @@
   <h1 class = "follow-us">Follow Us</h1>
   <ul>
     <!--add the links to social media and change iconss to the ones from the original website-->
-    <li class = "facebook"><a href = " " target = _blank class = "facebook"></a></li>
-    <li class = "linkedin"><a href = " " target=_blank class = "linkedin"></a></li>
-    <li class = "instagram"><a href = " " target = _blank class = "github"></a></li>
+    <li class = "facebook"><a href = " " target = _blank class = "facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+    <li class = "linkedin"><a href = " " target=_blank class = "linkedin"></a><i class="fa-brands fa-linkedin-in"></i></li>
+    <li class = "instagram"><a href = " " target = _blank class = "instagram"><i class="fa-brands fa-instagram"></i></a></li>
   </ul>
 
   <p class = "footer-links">PRIVACY POLICY</p>
   <p class = "footer-links">CLIENT TESTIMONIALS</p>
   <p class = "footer-links">ABOUT ME</p>
 </footer>
+
+<script type='text/javascript' src='https://www.google.com/recaptcha/api.js?hl=en&#038;ver=6.0.2' id='google-recaptcha-js'></script>
