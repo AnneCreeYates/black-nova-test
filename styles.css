@@ -3,56 +3,327 @@
   Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
   - The "symbol *" part is to solve Firefox SVG sprite bug
 */
-*:where(:not(iframe, canvas, img, svg, video):not(svg *, symbol *)) {
-    all: unset;
-    display: revert;
-  }
-  /* Preferred box-sizing value */
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
-  }
-  /* Reapply the pointer cursor for anchor tags */
-  a {
-    cursor: revert;
-  }
-  /* Remove list styles (bullets/numbers) */
-  ol, ul, menu {
-    list-style: none;
-  }
-  /* For images to not be able to exceed their container */
-  img {
-    max-width: 100%;
-  }
-  /* removes spacing between cells in tables */
-  table {
-    border-collapse: collapse;
-  }
-  /* revert the 'white-space' property for textarea elements on Safari */
-  textarea {
-    white-space: revert;
-  }
-  /* fix the feature of 'hidden' attribute.
-   display:revert; revert to element instead of attribute */
-  :where([hidden]){
-    display:none;
-  }
-  /* revert for bug in Chromium browsers
-   - fix for the content editable attribute will work properly. */
-  :where([contenteditable]){
-    -moz-user-modify: read-write;
-    -webkit-user-modify: read-write;
-    overflow-wrap: break-word;
-    -webkit-line-break: after-white-space;
-  }
-  /* apply back the draggable feature - exist only in Chromium and Safari */
-  :where([draggable="true"]) {
-    -webkit-user-drag: element;
-  }
-
-  /* reset end*/
-
-body {
-    background: yellow;
+*:where(:not(iframe, canvas, img, svg, video, input):not(svg *, symbol *)) {
+  all: unset;
+  display: revert;
 }
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reapply the pointer cursor for anchor tags */
+a {
+  cursor: revert;
+}
+/* Remove list styles (bullets/numbers) */
+ol, ul, menu {
+  list-style: none;
+}
+/* For images to not be able to exceed their container */
+img {
+  max-width: 100%;
+}
+/* removes spacing between cells in tables */
+table {
+  border-collapse: collapse;
+}
+/* revert the 'white-space' property for textarea elements on Safari */
+textarea {
+  white-space: revert;
+}
+/* fix the feature of 'hidden' attribute.
+display:revert; revert to element instead of attribute */
+:where([hidden]){
+  display:none;
+}
+/* revert for bug in Chromium browsers
+- fix for the content editable attribute will work properly. */
+:where([contenteditable]){
+  -moz-user-modify: read-write;
+  -webkit-user-modify: read-write;
+  overflow-wrap: break-word;
+  -webkit-line-break: after-white-space;
+}
+/* apply back the draggable feature - exist only in Chromium and Safari */
+:where([draggable="true"]) {
+  -webkit-user-drag: element;
+}
+
+/* reset end*/
+
+
+/*NAV STYLING*/
+/*hamburger styling*/
+
+.hamburger-bars {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  position:fixed;
+  width: 3em;
+  height: 3em;
+  /* border: rgb(236, 243, 230) 4px solid; */
+  justify-content: center;
+  /* background-color: blue; */
+
+}
+
+.hamburger-bars > span {
+  display: flex;
+  width: 1.4em;
+  height: 0.125em;
+  padding: 0.05em;
+  margin: 0.18em;
+  align-self: center;
+  background-color: ivory;
+        
+}
+
+.main-nav {
+  position: fixed;
+  /* top: -0.025em; */
+  display: flex;
+  /* width: fit-content; */
+  font-size: 1em;
+  font-family: sans-serif;
+  z-index: 10;
+  
+
+    
+}
+    
+
+.main-nav__menu {
+  transform: translateX(-200%);
+  transition: transform ease-in-out 250ms;
+  visibility: none;
+  height: auto;
+  width: 15em;
+  
+  
+}
+
+.main-nav li {
+  list-style: none;
+  display: grid;
+  /* border: rgb(17, 129, 9) 4px solid; */
+  height: 4em;
+    
+}
+    
+.main-nav li a {
+  color: #b4d044;
+  text-decoration: none;
+  margin: auto;
+}
+
+.main-nav li a:hover {
+  color: rgb(174, 255, 23);
+}
+
+.main-nav li#home {
+  position: relative;
+  width: auto;
+  height: 4em;
+  background-color: ivory;
+
+}
+
+.main-nav li#nutritional-therapy-link {
+  position: relative;
+  width: auto;
+  background-color: ivory;
+}
+
+.main-nav li#glowing-health-pr-link {
+  position: relative;
+  width: auto;
+  background-color: ivory;
+}
+
+.main-nav li#prices-contact-link{
+  position:sticky;
+  width: auto;
+  background-color: ivory;
+}
+.main-nav li#blog{
+  position: relative;
+  width: auto;
+  background-color: ivory;
+}
+.main-nav li#about{
+  position: relative;
+  width: auto;
+  background-color: ivory;
+  
+}
+
+.is-open .main-nav__menu {
+  display: block;
+  transform: translateX(0);
+  transition: transform ease-in-out 250ms;
+  visibility: visible;
+  overflow: hidden;
+    
+}
+
+.is-open .middle-bar {
+  visibility: hidden;
+}
+.is-open .top-bar {
+  transform: rotate(45deg);
+  margin-top: 0.2em;
+  width: 1.3em;
+  transition: transform ease-in 200ms;
+}
+.is-open .bottom-bar {
+  transform: rotate(-45deg);
+  width: 1.3em;
+  position: absolute;
+  transition: transform ease-in 200ms;
+}
+
+.is-open .hamburger-bars > span {
+  margin: -0.07em auto;
+  background-color: #b4d044;
+  display: flex;
+  position: fixed;
+}
+
+
+/*BODY*/
+body {
+  background-color: ivory;
+  display: grid;
+  /* grid-template-columns: repeat(3, 1fr); */
+  /* grid-template-rows: max-content; */
+
+  /* grid-template-areas: "column1" "column2" "column3"; */
+}
+
+.logo {
+  width: 15em;
+  position: fixed;
+  display: flex;
+  align-self: center;
+  z-index: 3;
+
+  /* grid-area: column2; */
+}
+
+.header {
+  display:flex;
+  flex-direction: column;
+  height: auto;
+  width: 100vw;
+  background-color: ivory;
+  margin: 0 auto;
+
+  /*background color just for orientation with grid setting*/
+  background-color: aquamarine;
+}
+
+
+.hero-photo {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+  position:relative;
+  bottom: 9em;
+}
+
+
+.hero-photo img{
+  display: flex;
+  width: 30%;
+  height: auto;
+  border-radius: 50%;
+  margin: 2em;
+  
+}
+
+#svg-1, #svg-2 {
+  position: fixed;
+  z-index: 1;
+  top: -2em;
+}
+
+/* #svg-2 {
+  
+  opacity: 0.5;
+  
+} */
+
+.glow-title {
+  position: relative;
+  display: flex;
+  font-family: 'Oleo Script', cursive;
+  top: 1em;
+  padding: 0 0.4em;
+  font-size: 7em;
+  color: #e8b50f;
+  text-shadow: -1px -1px 0 rgb(114, 9, 130), 3px -1px 2px rgb(114, 9, 130), -1px 1px 0 rgb(114, 9, 130), 1px 1px 0 rgb(114, 9, 130);
+}
+
+.glow-title2 {
+  position: relative;
+  font-size: 2em;
+  font-family: 'Molengo', sans-serif;
+  padding: 1em;
+  top: 8em;
+}
+
+.glow-title3 {
+  position: relative;
+  top:15em;
+  font-size: 1em;
+  font-family: 'Molengo', sans-serif;
+  padding: 2em;
+}
+
+h1 {
+    width: 100%;
+    font-size: 2em;
+    font-family: 'Molengo', sans-serif;
+    padding: 1em;
+}
+
+p, li {
+  font-family: 'Molengo', sans-serif;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+li {
+  padding: 0.5em;
+  margin: 0 2em;  
+}
+
+.fa-solid {
+  color:#b4d044;
+}
+
+
+
+
+h2 {
+  font-family: 'Molengo', sans-serif;
+  font-size: 1.5em;
+  margin: 0 auto;
+  padding: 0.5em;
+}
+
+/*Sections*/
+.main-content, .links, .partners-links, .latest-news, .contact {
+  margin: 3em auto;
+  padding: 2em;
+}
+
+footer {
+  padding: 2em;
+  
+}
+
