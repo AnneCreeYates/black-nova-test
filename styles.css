@@ -3,7 +3,7 @@
   Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
   - The "symbol *" part is to solve Firefox SVG sprite bug
 */
-*:where(:not(iframe, canvas, img, svg, video, input):not(svg *, symbol *)) {
+*:where(:not(iframe, canvas, img, svg, video, input, textarea):not(svg *, symbol *)) {
   all: unset;
   display: revert;
 }
@@ -195,17 +195,17 @@ display:revert; revert to element instead of attribute */
 }
 
 
-/*BODY*/
+/*BODY -- grid*/
 body {
   background-color: ivory;
   width: 100%;
-  height:fit-content;
-  display: grid;
-  /* grid-template-columns: repeat(3, 1fr); */
-  /* grid-template-rows: max-content; */
+  height: fit-content;
 
-  /* grid-template-areas: "column1" "column2" "column3"; */
+  display: grid;
+  gap: 1em;
+
 }
+
 
 
 .logo {
@@ -214,8 +214,8 @@ body {
   display: flex;
   align-self: center;
   z-index: 3;
-
-  /* grid-area: column2; */
+  padding: 0.5em;
+  
 }
 
 .header {
@@ -226,10 +226,13 @@ body {
   background-color: ivory;
   margin: 0 auto;
 
-  /*background color just for orientation with grid setting*/
-  background-color: aquamarine;
 }
 
+.hero {
+  background-color: #4c8744;
+  width: 100%;
+  display: block;
+}
 
 .hero-photo {
   display: flex;
