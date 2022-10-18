@@ -323,11 +323,34 @@ body {
 
 
 .main-content {
+  position: relative;
+  top: 20em;
+  margin: 0 auto;
+  padding: 2em;
   background-color: aqua;
   display: grid;
   gap: 1em;
   grid-template-columns: (3,1fr);
   grid-template-areas: "col1";
+}
+
+.main-content h1 {
+  padding: 1em;
+  text-align: center;
+}
+
+
+.main-content p, li {
+  font-size: 1.5em;
+  line-height: 1.7em;
+}
+
+.professional-summary p {
+  color: #e8b50f;
+  font-weight: 900;
+  padding: 2em;
+  font-size: 2em;
+  text-align: center;
 }
 
 
@@ -367,9 +390,8 @@ body {
 
 h1 {
     width: 100%;
-    font-size: 2em;
+    font-size: 3em;
     font-family: 'Molengo', sans-serif;
-    padding: 1em;
     color: #4c8744;
 }
 
