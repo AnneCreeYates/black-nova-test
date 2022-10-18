@@ -92,11 +92,12 @@ display:revert; revert to element instead of attribute */
   font-family: 'Molengo', sans-serif;
   z-index: 50;
   color: #4c8744;
-
+  
 }
     
-
+/*at the moment hiding is weird, but if the display is other than flex there is an active invisible field even when the menu is hidded opens it*/
 .main-nav__menu {
+  display: flex;
   transform: translateX(-200%);
   transition: transform ease-in-out 250ms;
   visibility: none;
@@ -200,12 +201,11 @@ display:revert; revert to element instead of attribute */
 body {
   background-color: ivory;
   width: 100%;
-  height: fit-content;
+  height:min-content;
 
   display: block;
 
 }
-
 
 
 .logo {
@@ -230,7 +230,7 @@ body {
 .hero {
   background-color: #f0f0be; 
   width: 100%;
-  height: 50vh;
+  height: auto;
   display: grid;
   gap: 1em;
   margin: 3em 0;
@@ -247,7 +247,6 @@ body {
   width: 87%;
   height: auto;
   position: relative;
-  /* bottom: 9em; */
   grid-area: 1 /1 / 3 / 4;
 }
 
@@ -268,7 +267,7 @@ body {
   z-index: 10;
   top: -2em;
   width: 100%;
-  display: block;
+  display: flex;
 
 }
 
@@ -324,14 +323,13 @@ body {
 
 .main-content {
   position: relative;
-  top: 20em;
   margin: 0 auto;
   padding: 2em;
-  background-color: aqua;
+  /* background-color: aqua; */
   display: grid;
   gap: 1em;
-  grid-template-columns: (3,1fr);
-  grid-template-areas: "col1";
+  grid-template-columns: (3, 1fr);
+  /* grid-template-areas: "col1"; */
 }
 
 .main-content h1 {
@@ -345,7 +343,7 @@ body {
   line-height: 1.7em;
 }
 
-.professional-summary p {
+.professional-summary p, .offer-description p {
   color: #e8b50f;
   font-weight: 900;
   padding: 2em;
@@ -355,6 +353,7 @@ body {
 
 
 .links {
+
   background-color: aquamarine;
   display: grid;
   gap: 1em;
@@ -362,6 +361,44 @@ body {
   grid-template-areas: "col1" "col2" "col3";
 }
 
+
+.links img {
+  border-radius: 23px;
+  margin: 0 auto;
+}
+
+.links p {
+  font-family: 'Oleo Script', cursive;
+  /* font-size: 1.4em; */
+}
+
+.consultations {
+  grid-area: 1/2/1/4;
+}
+
+.consultations__p {
+  grid-area: 1/1/1/3;
+  font-size: 2em;
+}
+
+.the-growth-health-pr {
+  grid-area: 2/1/3/3;
+
+}
+
+.the-growth-health-pr__p {
+  grid-area: 2/2/2/4;
+  font-size: 3em;
+}
+
+.free-ebook {
+  grid-area: 3/2/4/4;
+}
+
+.free-ebook__p {
+  grid-area: 3/1/4/3;
+  font-size: 2.5em;
+}
 
 .partners-links {
   background-color: darkolivegreen;
@@ -423,16 +460,12 @@ h2 {
   padding: 0.5em;
 }
 
-/*Sections*/
-.main-content, .links, .partners-links, .latest-news, .contact {
-  margin: 3em auto;
-  padding: 2em;
-}
-
 .contact {
   background-color: #b4d044;
   border-radius: 23px;
   width: 80%;
+  margin: 3em auto;
+  padding: 2em;
 }
 
 .contact__form {
