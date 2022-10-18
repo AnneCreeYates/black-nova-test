@@ -324,6 +324,44 @@ body {
 
 .main-content {
   background-color: aqua;
+  display: grid;
+  gap: 1em;
+  grid-template-columns: (3,1fr);
+  grid-template-areas: "col1";
+}
+
+
+.links {
+  background-color: aquamarine;
+  display: grid;
+  gap: 1em;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-areas: "col1" "col2" "col3";
+}
+
+
+.partners-links {
+  background-color: darkolivegreen;
+  display: grid;
+  gap: 1em;
+  grid-template-columns: (3,1fr);
+  grid-template-areas: "col1";
+}
+
+
+.latest-news {
+  display: grid;
+  gap: 1em;
+  grid-template-columns: (3,1fr);
+  grid-template-areas: "col1";
+}
+
+
+.contact {
+  display: grid;
+  gap: 1em;
+  grid-template-columns: (3,1fr);
+  grid-template-areas: "col1";
 }
 
 
@@ -436,6 +474,10 @@ footer {
   background-color: #b4d044;
   width: 100%;
   margin: 0 auto;
+  display: grid;
+  gap: 1em;
+  grid-template-columns: (3,1fr);
+  grid-template-areas: "col1";
   
 }
 
