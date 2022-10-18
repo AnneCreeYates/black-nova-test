@@ -321,6 +321,12 @@ body {
   grid-area: 3 /4 / 4 / 1;
 }
 
+
+.main-content {
+  background-color: aqua;
+}
+
+
 h1 {
     width: 100%;
     font-size: 2em;
