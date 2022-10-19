@@ -343,6 +343,20 @@ body {
   line-height: 1.7em;
 }
 
+.part-4_section {
+  background-color: #d4e68d;
+  padding: 1em;
+  border-radius: 23px;
+  
+}
+
+.part-4_section h1 {
+  font-family: 'Oleo Script', cursive;
+  font-size: 3em;
+  color:#e8b50f;
+  text-shadow: -1px -1px 0 rgb(114, 9, 130), 3px -1px 2px rgb(114, 9, 130), -1px 1px 0 rgb(114, 9, 130), 1px 1px 0 rgb(114, 9, 130);
+}
+
 .professional-summary p, .offer-description p {
   color: #e8b50f;
   font-weight: 900;
@@ -354,11 +368,14 @@ body {
 
 .links {
 
-  background-color: aquamarine;
+  background-color: #f0f0be;
   display: grid;
-  gap: 1em;
+  gap: 2em;
   grid-template-columns: repeat(3,1fr);
-  grid-template-areas: "col1" "col2" "col3";
+  /* grid-template-areas: "col1" "col2" "col3"; */
+  width: fit-content;
+  padding: 10%;
+  align-items: end;
 }
 
 
@@ -369,7 +386,9 @@ body {
 
 .links p {
   font-family: 'Oleo Script', cursive;
-  /* font-size: 1.4em; */
+  color: #4c8744;
+  text-shadow: -1px -1px 0 ivory, 3px -1px 2px ivory, -1px 1px 0 ivory, 1px 1px 0 ivory;
+  height: fit-content;
 }
 
 .consultations {
@@ -378,7 +397,8 @@ body {
 
 .consultations__p {
   grid-area: 1/1/1/3;
-  font-size: 2em;
+  font-size: 2.5em;
+  text-align: end;
 }
 
 .the-growth-health-pr {
@@ -398,14 +418,31 @@ body {
 .free-ebook__p {
   grid-area: 3/1/4/3;
   font-size: 2.5em;
+  width: 100%;
+  text-align: end;
 }
 
 .partners-links {
-  background-color: darkolivegreen;
+  /* background-color: darkolivegreen; */
   display: grid;
   gap: 1em;
-  grid-template-columns: (3,1fr);
+  grid-template-columns: (3, 1fr);
   grid-template-areas: "col1";
+
+  padding: 2em;
+  width: 100%;
+  justify-items: center;
+}
+
+.afmcp, .bant, .cnhc {
+  width:  40%;
+  border-radius: 20px;
+  padding: 1em;
+}
+
+.badge {
+  width: 60%;
+  padding: 1em;
 }
 
 
