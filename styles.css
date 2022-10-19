@@ -1047,3 +1047,90 @@ footer {
       top:-17em;
     }
   }
+
+  @media (max-width: 32em) {
+    .main-nav li a {
+      font-size: 0.9em;
+      line-height: 1em;
+      text-align: center;
+    }
+
+    .main-nav li {
+      padding: 1em;
+    }
+
+    .logo {
+      width: 9em;
+    }
+
+    .glow-title {
+      position: relative;
+      top: 1em;
+      font-size: 6em;
+    }
+
+    .glow-title2 {
+      position: relative;
+      top: 3em;
+      font-size: 1.4em;
+    }
+
+    .glow-title3 {
+      position: relative;
+      top: 1em;
+    }
+
+    .main-content h1 {
+      font-size: 2em;
+    }
+
+    .main-content p, li, p {
+      font-size: 1.2em;
+    }
+
+    .latest-news img {
+      visibility: collapse;
+      
+    }
+
+    .one-two, .two-three {
+      visibility: hidden;
+    }
+
+    .contact__title {
+      font-size: 2em;
+    }
+
+    .name, .email, .subject{
+      font-size: 1em;
+      width: 16em;
+    }
+
+    .message {
+      font-size: 1.4em;
+      width: 14em;
+    }
+
+    .subscribe__label {
+      font-size: 1.1em;
+    }
+
+    .subscribe-checkbox {
+      width: 0.9em;
+      height: 0.9em;
+      margin: 1em auto;
+    }
+
+    .g-recaptcha {
+      width: 12em;
+    }
+
+    .footer-links {
+      font-size: 0.8em;
+      margin: 0 auto;
+    }
+
+    .footer-links1, .footer-links2, .footer-links3 {
+      text-align: center;
+    }
+  }
