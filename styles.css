@@ -568,6 +568,9 @@ body {
 
   .contact__form {
     border-radius: 23px;
+    width: 100%;
+    text-align: center;
+    
   }
 
   .contact__title {
@@ -580,6 +583,7 @@ body {
     padding: 0.5em;
     margin: 0 auto;
     font-size: 1.3em;
+
   }
 
   .name, .email, .subject, .message {
@@ -590,7 +594,7 @@ body {
   }
 
   .subscribe-checkbox {
-    margin: 2em 0;
+    display: inline-block;
     width: 1em;
     height:1em;
   }
@@ -676,7 +680,7 @@ footer {
   .footer-links {
     font-size: 1.4em;
     display: block;
-
+    margin: 0 auto;
   }
 
   hr { 
@@ -726,6 +730,10 @@ footer {
     .latest-news h2 {
       font-size: 2.5em;
       text-align: center;
+    }
+
+    .footer-links {
+      background-color: antiquewhite;
     }
   }
 
@@ -1121,9 +1129,9 @@ footer {
       margin: 1em auto;
     }
 
-    .g-recaptcha {
+    /* .g-recaptcha {
       width: 12em;
-    }
+    } */
 
     .footer-links {
       font-size: 0.8em;
