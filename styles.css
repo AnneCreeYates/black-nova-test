@@ -808,29 +808,40 @@ footer {
 
     .consultations {
       grid-area: 1/2/2/3;
-      
+      position: relative;
+      right: 2em;
     }
     .consultations__p {
       font-size: 3.3em;
+      position: relative;
+      right: 1em;
     }
 
     .the-growth-health-pr {
       grid-area: 1/3/2/4;
+      position: relative;
+      left: 2em;
     }
 
     .the-growth-health-pr__p {
       grid-area: 1/3/2/5;
       font-size: 3.5em;
       text-align: center;
+      position: relative;
+      left: 1em;
     }
 
     .free-ebook {
       grid-area: 2/2/4/4;
+      position: relative;
+      top: 2em;
     }
 
     .free-ebook__p {
       grid-area: 3/2/5/4;
       font-size: 3.5em;
+      position: relative;
+      top: 0.5em;
     }
 
 
@@ -864,6 +875,7 @@ footer {
       height: fit-content;
       width: auto;
     }
+
 
 
   }
