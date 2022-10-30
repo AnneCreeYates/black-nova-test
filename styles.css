@@ -770,10 +770,10 @@ footer {
     }
   }
 
-  @media (min-width: 60em) {
-    #svg-1 {
+  @media (min-width: 50em) {
+    /* #svg-1 {
       top:-9em;
-    }
+    } */
 
     .part-1_section {
       grid-area: 1/1/2/2;
@@ -954,6 +954,12 @@ footer {
       font-size: 1.3em;
     }
 
+  }
+
+  @media (min-width: 56em) {
+    #svg-1 {
+      top:-8em;
+    }
   }
 
 
@@ -1338,7 +1344,9 @@ footer {
     .latest-news img {
       display: none;
     }
+  }
 
+  @media (max-width: 50em) {
     .one-two, .two-three {
       visibility: hidden;
     }
