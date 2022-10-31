@@ -54,7 +54,6 @@ display:revert; revert to element instead of attribute */
 
 /* reset end*/
 
-
 /*NAV STYLING*/
 /*hamburger styling*/
 
@@ -199,12 +198,17 @@ display:revert; revert to element instead of attribute */
 
 /*BODY*/
 body {
-  background-color: ivory;
+  /* background-color: ivory; */
   width: 100%;
   height:min-content;
 
   display: block;
 
+}
+
+.content-no-header-and-footer {
+  background-color: rgba(255, 255, 240, 0.584);
+  padding: 0 0 2em 0;
 }
 
 
@@ -228,7 +232,7 @@ body {
 }
 
 .hero {
-  background-color: #f0f0be; 
+  background-color: #f0f0be8c; 
   width: 100%;
   height: auto;
   display: grid;
@@ -363,7 +367,7 @@ body {
 
 .links {
   
-  background-color: #f0f0be;
+  background-color: #f0f0be8c;
   display: grid;
   gap: 2em;
   grid-template-columns: repeat(3,1fr);
@@ -450,7 +454,7 @@ body {
 
 
 .latest-news {
-  background-color: #f0f0be;
+  background-color: #f0f0be8c;
   padding: 2em;
   align-items: end;
   display: grid;
@@ -632,7 +636,7 @@ body {
     border-radius: 1em;
     background-color:#4c8744;
     font-size: 1.5em;
-    color:#f0f0be;
+    color: ivory;
     font-weight: 800;
     
   }
@@ -928,7 +932,7 @@ footer {
     }
 
     .description-2 {
-      grid-area: 4/2/5/4;
+      grid-area: 4/2/5/3;
       font-size: 1.4em;
     }
 
@@ -939,8 +943,8 @@ footer {
     }
 
     .entry-3 {
-      grid-area: 5/2/6/4;
-      width: 76%;
+      grid-area: 5/2/6/3;
+      /* width: 60%; */
     }
 
     .article-title-3 {
