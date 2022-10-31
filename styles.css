@@ -1006,6 +1006,11 @@ footer {
       transform: rotateX(24deg);
     }
 
+    .content-no-header-and-footer {
+      max-width: 86em;
+      margin: 0 auto;
+    }
+
     .main-content {
       width: 90%;
       grid-template-columns: repeat(6, 1fr);
@@ -1115,29 +1120,20 @@ footer {
       grid-area: 3/3/4/5;
     }
 
-    /* .latest-news {
-      grid-template-columns: 1fr 50% 1fr;
-    }
-
-    .latest-news__h1{
-      grid-area: 1/2/2/7;
-    }
-
-    .article-intro {
-      grid-area: 2/2/3/6;
-      text-align: center;
-      padding: 0 0 3em 0;
-    }
-
+     
     .entry-1 {
-      grid-area: 3/1/4/3;
-      justify-self: center;
-    }
-
-    .article-title-1 {
+      max-width: 35em;
       grid-area: 3/2/4/3;
     }
 
+
+    
+    /* .article-title-1 {
+      grid-area: 3/2/4/3;
+  
+    } */
+
+    /*
     .description-1 {
       grid-area: 3/3/4/6;
       font-size: 1.3em;
