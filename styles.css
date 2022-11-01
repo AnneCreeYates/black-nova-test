@@ -460,7 +460,6 @@ body {
   display: grid;
   gap: 1em;
   grid-template-columns: (3, 1fr);
-  grid-template-areas: "col1";
 }
 
   .latest-news__h1 {
@@ -490,6 +489,7 @@ body {
 
     .entry-1 {
       grid-area: 3/1/4/3;
+      max-width: 50em;
     }
     .article-title-1 {
       grid-area: 3/2/4/4;
@@ -508,6 +508,7 @@ body {
     
     .entry-2 {
       grid-area: 5/1/6/3;
+      max-width: 50em;
     }
 
     .article-title-2 {
@@ -527,7 +528,8 @@ body {
     .entry-3 {
       width: 100%;
       padding: 2em;
-
+      max-width: 40em;
+      justify-self: center;
       grid-area: 7/1/8/3;
     }
 
@@ -552,16 +554,12 @@ body {
     }
 
 
-
-
-
 .contact {
   background-color: #b4d044;
   /* border-radius: 23px; */
   width: 100%;
   margin: 3em auto;
   padding: 2em;
-
   max-width: 40em;
   display: grid;
   gap: 1em;
@@ -1011,7 +1009,7 @@ footer {
     }
 
     .content-no-header-and-footer {
-      max-width: 86em;
+      max-width: 107em;
       margin: 0 auto;
     }
 
