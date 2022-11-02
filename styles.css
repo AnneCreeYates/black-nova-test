@@ -1068,7 +1068,7 @@ footer {
     }
 
     .links {
-      grid-template-columns: repeat(4,1fr);
+      grid-template-columns: repeat(4, 1fr);
     }
 
     .consultations {
@@ -1119,66 +1119,63 @@ footer {
       grid-area: 3/3/4/5;
     }
 
+
+    .latest-news {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .article-intro {
+      grid-area: 2/1/3/4;
+    }
      
     .entry-1 {
-      max-width: 35em;
-      grid-area: 3/2/4/3;
+      grid-area: 3/1/4/2;
     }
 
+    .article-title-1 {
+      grid-area: 3/1/5/2;
+    }
 
-    
-    /* .article-title-1 {
-      grid-area: 3/2/4/3;
-  
-    } */
-
-    /*
     .description-1 {
-      grid-area: 3/3/4/6;
-      font-size: 1.3em;
-      
+      grid-area: 5/1/6/2;
+      margin: 0 2em;
+      align-self: flex-start;
     }
 
-    .one-two {
-      grid-area: 3/2/4/6;
-      width: 70%;
-      justify-self: flex-end;
+
+    .one-two, .two-three{
+      display: none;
     }
 
 
     .entry-2 {
-      grid-area: 4/4/5/6;
-      justify-self: center;
+      grid-area: 3/2/4/3;
     }
 
     .article-title-2 {
-      grid-area: 4/4/5/6;
+      grid-area: 3/2/5/3;
     }
 
     .description-2 {
-      grid-area: 4/2/5/4;
-      font-size: 1.3em;
-    }
-
-    .two-three {
-      grid-area: 4/2/5/7;
-      width: 70%;
-      justify-self: flex-start;
+      grid-area: 5/2/6/3;
+      margin: 0 2em;
+      align-self: flex-start;
     }
 
     .entry-3 {
-      grid-area: 5/2/6/4;
-      width: 76%;
+      grid-area: 3/3/4/4;
     }
 
     .article-title-3 {
-      grid-area: 5/2/6/4;
+      grid-area: 3/3/5/4;
     }
 
     .description-3 {
-      grid-area: 5/3/6/6;
-      font-size: 1.3em;
-    } */
+      grid-area: 5/3/6/4;
+      margin: 0 2em;
+      align-self: flex-start;
+      
+    }
 
     footer {
       grid-template-columns: repeat(5, 1fr);
