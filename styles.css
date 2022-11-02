@@ -371,7 +371,6 @@ body {
   display: grid;
   gap: 2em;
   grid-template-columns: repeat(3,1fr);
-  /* grid-template-areas: "col1" "col2" "col3"; */
   width: fit-content;
   padding: 10%;
   align-items: end;
@@ -431,9 +430,7 @@ body {
   
   display: grid;
   gap: 1em;
-  grid-template-columns: (3, 1fr);
-  grid-template-areas: "col1";
-
+  
   padding: 2em;
   width: 100%;
   justify-items: center;
@@ -459,7 +456,7 @@ body {
   align-items: end;
   display: grid;
   gap: 1em;
-  grid-template-columns: (3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 }
 
   .latest-news__h1 {
@@ -876,11 +873,11 @@ footer {
     }
 
     .latest-news {
-      grid-template-columns: 1fr 50% 1fr;
+      grid-template-columns: repeat(2, 1fr);
     }
 
     .latest-news__h1{
-      grid-area: 1/2/2/7;
+      grid-area: 1/1/2/-1;
     }
 
     .latest-news h2 {
@@ -893,64 +890,64 @@ footer {
     }
 
     .article-intro {
-      grid-area: 2/2/3/6;
+      grid-area: 2/1/3/3;
       text-align: center;
       font-size: 1.4em;
     }
 
     .entry-1 {
-      grid-area: 3/1/4/3;
+      grid-area: 3/1/4/2;
       justify-self: center;
     }
 
     .article-title-1 {
-      grid-area: 3/2/4/3;
+      grid-area: 3/1/4/2;
     }
 
     .description-1 {
-      grid-area: 3/3/4/6;
+      grid-area: 3/2/4/3;
       font-size: 1.4em;
       
     }
 
     .one-two {
-      grid-area: 3/2/4/6;
+      grid-area: 4/1/5/3;
       width: 70%;
       justify-self: flex-end;
     }
 
 
     .entry-2 {
-      grid-area: 4/3/5/6;
+      grid-area: 5/2/6/3;
       justify-self: center;
     }
 
     .article-title-2 {
-      grid-area: 4/4/5/6;
+      grid-area: 5/2/6/3;
     }
 
     .description-2 {
-      grid-area: 4/2/5/3;
+      grid-area: 5/1/6/2;
       font-size: 1.4em;
     }
 
     .two-three {
-      grid-area: 4/2/5/7;
+      grid-area: 6/1/7/3;
       width: 70%;
       justify-self: flex-start;
     }
 
     .entry-3 {
-      grid-area: 5/2/6/3;
+      grid-area: 7/1/8/2;
       /* width: 60%; */
     }
 
     .article-title-3 {
-      grid-area: 5/2/6/4;
+      grid-area: 7/1/8/2;
     }
 
     .description-3 {
-      grid-area: 5/3/6/6;
+      grid-area: 7/2/8/3;
       font-size: 1.4em;
     }
 
