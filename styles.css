@@ -1101,22 +1101,19 @@ footer {
     }
 
     .free-ebook {
-      grid-area: 3/1/4/4;
-      position: relative;
-      top: 2em;
-      position: relative;
-      top: 7em;
-      width: 50%;
+      grid-area: 2/1/4/4;
+      /* position: relative;
+      top: 2em; */
+      width: 45%;
     }
 
     .free-ebook__p {
       z-index: 9;
       font-size: 3em;
       text-align: left;
-
+      grid-area: 3/2/4/5;
       position: relative;
-      top: 2em;
-      grid-area: 3/3/4/5;
+      top: 1.4em;
     }
 
 
